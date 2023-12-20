@@ -19,8 +19,13 @@ jobs:
         id: release
         uses: dev-build-deploy/release-me@v0
         with:
-          token: ${{ github.token }}
+          token: ${{ secrets.MONOREPO_SPLITTER_PERSONAL_ACCESS_TOKEN }}
           prefix: v                    # OPTIONAL; prefixes the version with v (e.g. v1.0.0)
+          
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - if: ${{ steps.release.outputs.created }}
         run: echo ${{ fromJSON(steps.release.outputs.release).tag_name }}
