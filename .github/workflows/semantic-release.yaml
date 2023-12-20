@@ -6,7 +6,10 @@ on:
     branches:
       - main
       - next
+      - next-major
       - beta
+      - alpha
+      - '*.x'
 #    paths:
 #      - '.mvn/**'
 #      - 'src/**'
