@@ -168,7 +168,7 @@ jobs:
     if: |
       needs.check.outputs.has_gh_secrets
         && needs.check_version_number.outputs.new_release_published
-    uses: ./.github/workflows/split.yaml
+    uses: ./.github/workflows/split.yml
     with:
       release_tag: ${{ needs.tag_version.outputs.new_version }}
     secrets: inherit
