@@ -9,6 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: plutotcool/release@v1
+      - uses: plutotcool/release@v2.0.0
         with:
           github_token:  ${{ secrets.MONOREPO_SPLITTER_PERSONAL_ACCESS_TOKEN }}
+          publish: false
