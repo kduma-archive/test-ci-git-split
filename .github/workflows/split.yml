@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - main
-      - develop
+      - next
+      - next-major
+      - beta
+      - alpha
       - '*.x'
     tags:
       - 'v*'
