@@ -135,7 +135,7 @@ jobs:
     needs: [tag_version]
     if: |
       needs.check.outputs.has_gh_secrets
-        && needs.tag_version.outputs.new_release
+        && needs.check_version_number.outputs.new_release_published
     uses: ./.github/workflows/build-test-publish.yaml
     with:
       release_tag: ${{ needs.tag_version.outputs.new_version }}
