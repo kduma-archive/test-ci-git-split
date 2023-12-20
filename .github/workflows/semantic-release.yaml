@@ -161,3 +161,14 @@ jobs:
       release_tag: ${{ needs.tag_version.outputs.new_version }}
       dry_run: false
     secrets: inherit
+
+  split:
+    name: Split repo - ${{ needs.tag_version.outputs.new_version }}
+    needs: [tag_version]
+    if: |
+      needs.check.outputs.has_gh_secrets
+        && needs.check_version_number.outputs.new_release_published
+    uses: ./.github/workflows/split.yaml
+    with:
+      release_tag: ${{ needs.tag_version.outputs.new_version }}
+    secrets: inherit
