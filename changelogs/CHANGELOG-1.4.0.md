@@ -3,4 +3,4 @@
 
 ### Features
 
-* test next ([64c4f3d](https://github.com/kduma-archive/test-ci-git-split/commit/64c4f3d701100d07970b6d1e391b4c0db81fd6ca))
+* test next ([#4](https://github.com/kduma-archive/test-ci-git-split/issues/4)) ([f11f2e2](https://github.com/kduma-archive/test-ci-git-split/commit/f11f2e219697c8a630bee18cea4fb60aef581323))
