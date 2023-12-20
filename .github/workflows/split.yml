@@ -11,6 +11,13 @@ on:
       - '*.x'
     tags:
       - 'v*'
+  workflow_call:
+    inputs:
+      release_tag:
+        description: |
+          'Version to manually release'
+        required: true
+        type: string
 
 jobs:
   split:
@@ -29,5 +36,5 @@ jobs:
         with:
           prefix: "library"
           remote: "https://github.com/kduma-archive/test-ci-git-split-library.git"
-          reference: "${{ github.ref_name }}"
-          as_tag: "${{ startsWith(github.ref, 'refs/tags/') }}"
+          reference: "${{ inputs.release_tag || github.ref_name }}"
+          as_tag: "${{ !!inputs.release_tag || startsWith(github.ref, 'refs/tags/') }}"
