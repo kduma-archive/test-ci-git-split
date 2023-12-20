@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5d8a0a46f6c351818063157b9a95565",
+    "content-hash": "073092c5cb9779c94c3b321cff84f8ab",
     "packages": [
         {
             "name": "brick/math",
@@ -5649,6 +5649,25 @@
             "time": "2023-11-09T08:28:32+00:00"
         },
         {
+            "name": "test-ci/library",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "library",
+                "reference": "853a7954921b92dd03a6fc55bf8eecaefda7aad6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TestCi\\Library\\": "src/"
+                }
+            },
+            "description": "test",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "v2.2.7",
             "source": {
@@ -9210,7 +9229,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
