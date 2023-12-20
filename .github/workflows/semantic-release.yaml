@@ -170,5 +170,5 @@ jobs:
         && needs.check_version_number.outputs.new_release_published
     uses: ./.github/workflows/split.yml
     with:
-      release_tag: ${{ needs.tag_version.outputs.new_version }}
+      release_tag: v${{ needs.tag_version.outputs.new_version }}
     secrets: inherit
