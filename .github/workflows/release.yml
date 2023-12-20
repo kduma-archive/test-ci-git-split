@@ -21,14 +21,14 @@ jobs:
         with:
           token: ${{ secrets.MONOREPO_SPLITTER_PERSONAL_ACCESS_TOKEN }}
           prefix: v                    # OPTIONAL; prefixes the version with v (e.g. v1.0.0)
-          
+
+      - if: ${{ steps.release.outputs.created }}
+        run: echo ${{ fromJSON(steps.release.outputs.release).tag_name }}
+
       - name: Checkout code
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
-      - if: ${{ steps.release.outputs.created }}
-        run: echo ${{ fromJSON(steps.release.outputs.release).tag_name }}
 
       - name: Split package
         uses: "claudiodekker/splitsh-action@v1.0.0"
