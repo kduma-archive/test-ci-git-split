@@ -17,6 +17,7 @@
 
 ### Miscellaneous Chores
 
+* **release:** 1.4.0 [skip ci] ([553d62b](https://github.com/kduma-archive/test-ci-git-split/commit/553d62bb1b8392a9144f89944a5fe159cca89b5f)), closes [#5](https://github.com/kduma-archive/test-ci-git-split/issues/5) [#4](https://github.com/kduma-archive/test-ci-git-split/issues/4) [#4](https://github.com/kduma-archive/test-ci-git-split/issues/4) [#4](https://github.com/kduma-archive/test-ci-git-split/issues/4)
 * **release:** 1.4.0 [skip ci] ([2e08d34](https://github.com/kduma-archive/test-ci-git-split/commit/2e08d34cd80267dc12f0208170c983264f2a36ca)), closes [#4](https://github.com/kduma-archive/test-ci-git-split/issues/4)
 * **release:** 1.4.0-beta.1 [skip ci] ([cf477b4](https://github.com/kduma-archive/test-ci-git-split/commit/cf477b4bf54ce1ff657befc16b4426d80d3443f4))
 * **release:** 1.4.0-beta.2 [skip ci] ([7ad4902](https://github.com/kduma-archive/test-ci-git-split/commit/7ad490268a80d29435f34cb3090438c8926c7901))
@@ -28,4 +29,5 @@
 
 ### CI/CD
 
+* fix ([ec6071c](https://github.com/kduma-archive/test-ci-git-split/commit/ec6071c254c41399fc13ad4ed844a2c256a25e3b))
 * fix ([fd73668](https://github.com/kduma-archive/test-ci-git-split/commit/fd7366881c3c0fc9c5b1baecad21f883ee953306))
