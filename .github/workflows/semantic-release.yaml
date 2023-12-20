@@ -67,11 +67,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           dry_run: true
-          branches: |
-            [
-              "+([0-9])?(.{+([0-9]),x}).x",
-              "main"
-            ]
           extends: |
             conventional-changelog-conventionalcommits@6.1.0
           extra_plugins: |
