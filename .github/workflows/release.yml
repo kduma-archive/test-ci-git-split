@@ -6,10 +6,13 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v2
 
-      - uses: plutotcool/release@v2.0.0
-        with:
-          github_token:  ${{ secrets.MONOREPO_SPLITTER_PERSONAL_ACCESS_TOKEN }}
-          publish: false
+      - uses: d3p1/semantic-releasify@v1.2.0
+        env :
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
