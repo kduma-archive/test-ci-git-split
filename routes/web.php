@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'welcome');
 
 Route::get('/lib', function (\TestCi\Library\Lib $lib) {
-    return $lib->hello('John');
+    return $lib->helloWorld('John');
 });
 
 Route::view('dashboard', 'dashboard')
