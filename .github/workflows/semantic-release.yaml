@@ -66,12 +66,22 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          dry_run: true
           branches: |
             [
-              "+([0-9])?(.{+([0-9]),x}).x",
-              "main"
+              '+([0-9])?(.{+([0-9]),x}).x',
+              'main',
+              'next',
+              'next-major',
+              {
+                name: 'beta',
+                prerelease: true
+              },
+              {
+                name: 'alpha',
+                prerelease: true
+              }
             ]
+          dry_run: true
           extends: |
             conventional-changelog-conventionalcommits@6.1.0
           extra_plugins: |
@@ -108,8 +118,18 @@ jobs:
           semantic_version: 19
           branches: |
             [
-              "+([0-9])?(.{+([0-9]),x}).x",
-              "main"
+              '+([0-9])?(.{+([0-9]),x}).x',
+              'main',
+              'next',
+              'next-major',
+              {
+                name: 'beta',
+                prerelease: true
+              },
+              {
+                name: 'alpha',
+                prerelease: true
+              }
             ]
           extends: |
             conventional-changelog-conventionalcommits@6.1.0
@@ -135,7 +155,7 @@ jobs:
     needs: [tag_version]
     if: |
       needs.check.outputs.has_gh_secrets
-        && needs.tag_version.outputs.new_release
+        && needs.check_version_number.outputs.new_release_published
     uses: ./.github/workflows/build-test-publish.yaml
     with:
       release_tag: ${{ needs.tag_version.outputs.new_version }}
