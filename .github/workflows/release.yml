@@ -1,0 +1,14 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: plutotcool/release@v1
+        with:
+          github_token:  ${{ secrets.MONOREPO_SPLITTER_PERSONAL_ACCESS_TOKEN }}
