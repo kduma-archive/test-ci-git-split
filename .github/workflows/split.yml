@@ -37,4 +37,4 @@ jobs:
           prefix: "library"
           remote: "https://github.com/kduma-archive/test-ci-git-split-library.git"
           reference: "${{ inputs.release_tag || github.ref_name }}"
-          as_tag: "${{ inputs.release_tag || startsWith(github.ref, 'refs/tags/') }}"
+          as_tag: "${{ !!inputs.release_tag || startsWith(github.ref, 'refs/tags/') }}"
