@@ -5,6 +5,8 @@ use Illuminate\Support\ServiceProvider;
 
 return [
 
+    'version' => '0.0.0',
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

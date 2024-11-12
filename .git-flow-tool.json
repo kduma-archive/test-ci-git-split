@@ -1,0 +1,5 @@
+{
+    "versionProvider": "php-array?filename=config/app.php&key=version",
+    "gitFlow": "branch[develop]=develop&branch[master]=main&prefix[feature]=feature/&prefix[release]=release/&prefix[hotfix]=hotfix/&prefix[support]=support/&prefix[versionTag]=v",
+    "git": "author[name]=BOT&author[email]=bot@localhost"
+}
